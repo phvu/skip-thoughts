@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tweet visualization</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            body {
+                font-family: Monospace;
+                background-color: #f0f0f0;
+                margin: 0px;
+                overflow: hidden;
+            }
+
+            .info {
+                position: absolute;
+                background-color: black;
+                opacity: 0.8;
+                color: white;
+                text-align: center;
+                font-size: 14pt;
+                width: 100%;
+                z-index: 99;
+            }
+
+            #info {
+                top: 0px;
+                min-height: 30px;
+            }
+
+            #info_stick {
+                bottom: 0px;
+                min-height: 30px;
+            }
+
+            #container {
+                position: relative;
+            }
+
+            .info a {
+                color: #00ffff;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="info" id="info">
+            <i>Hover on the points to see the tweets</i>
+        </div>
+        <div id="container"></div>
+        <div class="info" id="info_stick">
+            <i>Click on any point to stick the corresponding tweet here</i>
+        </div>
+
+        <script src="http://threejs.org/build/three.min.js"></script>
+        <script src="http://threejs.org/examples/js/controls/TrackballControls.js"></script>
+        <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+        <script src="tweets_data_full.js"></script>
+
+        <script src="tweets.js"></script>
+    </body>
+</html>
