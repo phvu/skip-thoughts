@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+if [ ! -d ./tables/ ]; then
+    mkdir ./tables
+fi
+
+if [ ! -d ./models/ ]; then
+    mkdir ./models
+fi
+
 SERVER_URL="http://www.cs.toronto.edu/~rkiros/models"
 wget -P ./tables/ ${SERVER_URL}/dictionary.txt
 wget -P ./tables/ ${SERVER_URL}/utable.npy
