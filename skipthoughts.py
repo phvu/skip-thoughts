@@ -20,8 +20,8 @@ profile = False
 #-----------------------------------------------------------------------------#
 # Specify model and table locations here
 #-----------------------------------------------------------------------------#
-path_to_models = '/Users/vupham/code/personal/skip-thoughts/models/'
-path_to_tables = '/Users/vupham/code/personal/skip-thoughts/tables/'
+path_to_models = os.path.join(os.path.split(os.path.abspath(__file__))[0], 'models/')
+path_to_tables = os.path.join(os.path.split(os.path.abspath(__file__))[0], 'tables/')
 #-----------------------------------------------------------------------------#
 
 path_to_umodel = path_to_models + 'uni_skip.npz'
