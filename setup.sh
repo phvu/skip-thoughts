@@ -17,6 +17,9 @@ wget -P ./models/ ${SERVER_URL}/uni_skip.npz.pkl
 wget -P ./models/ ${SERVER_URL}/bi_skip.npz
 wget -P ./models/ ${SERVER_URL}/bi_skip.npz.pkl
 
+echo "Downloading NLTK data"
+python -c "import nltk; nltk.download('punkt')"
+
 echo "Done downloading model files. Now compiling bh-tsne"
 cd ./bh_tsne/
 g++ sptree.cpp tsne.cpp -o bh_tsne -O2
